@@ -1,0 +1,13 @@
+{
+  "name": "multiCapabilities",
+  "version": "0.0.0",
+  "dependencies": {
+    "protractor": "^1.0.0-rc4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-e2e": "protractor test/protractor.conf.js",
+    "test-e2e-dev": "protractor test/protractor.conf.js --chrome"
+  }
+}

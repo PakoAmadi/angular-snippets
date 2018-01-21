@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>$watch</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <style type="text/css">
+        .panel {
+            width: 70%;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+<body ng-controller="WatchCtrl">
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Create Account</h3>
+    </div>
+    <div class="panel-body">
+
+        <form role="form">
+            <div class="form-group">
+                <label for="eml">Email address</label>
+                <input id="eml"
+                       type="email"
+                       class="form-control"
+                       placeholder="Email address"
+                       ng-model="user.email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password</label>
+                <input id="pwd"
+                       type="password"
+                       class="form-control"
+                       placeholder="Password"
+                       ng-model="user.password">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+
+    </div>
+</div>
+
+<div class="panel panel-danger" ng-show="showReqs">
+    <div class="panel-heading">
+        <h3 class="panel-title">Password Requirements</h3>
+    </div>
+    <div class="panel-body">
+        <ul>
+            <li ng-repeat="req in reqs">{{ req }}</li>
+        </ul>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

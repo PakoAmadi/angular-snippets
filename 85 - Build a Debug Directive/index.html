@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Egghead.io</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+</head>
+<body ng-app="egghead" ng-controller="AppCtrl as app">
+
+<div class="well-large" debug>
+    {{2 + 2}}
+</div>
+
+
+<ul class="well" debug>
+    <li ng-repeat="person in app.people">
+        {{person.lastName}}, {{person.firstName}}
+    </li>
+</ul>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

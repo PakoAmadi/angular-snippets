@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="egghead">
+<head>
+<meta name="description" content="Using ngModel options to update on blur instead of keyup." />
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+<script src="//code.jquery.com/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+  <body ng-controller="MainCtrl as main">
+    <div class="container">
+      <div class="well">
+        <input type="text" class="form-control" 
+          ng-model="main.message"
+          ng-model-options="{updateOn:'blur'}"/>  
+      </div>
+      <div class="well">
+        <strong>{{main.output}}</strong>
+      </div>
+    </div>
+  </body>
+
+</html>

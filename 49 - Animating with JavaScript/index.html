@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title>Egghead Videos</title>
+    <link rel="stylesheet" href="bower_components/topcoat/css/topcoat-desktop-light.css">
+</head>
+<body class="well-lg" ng-app="app" ng-controller="AppCtrl as app">
+
+<button class="topcoat-button--large--cta" ng-click="app.toggle=!app.toggle">Goodbye, fair notification</button>
+<hr/>
+<div class="topcoat-notification toggle" ng-if="app.toggle">I'm too young to fade! :(</div>
+
+<script type="text/javascript" src="bower_components/greensock/src/uncompressed/TweenMax.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+Update 06/12/2013
+  AngularJS
+    version : 1.2.6 (work fine with other 1.2.x as well)
+    note    : we use AngularJS CDN in the index.html and back-up downloaded versions in 'vendor' folder in case your internet is down
+
+  Zurb Foundation:
+    version : 5.0.2

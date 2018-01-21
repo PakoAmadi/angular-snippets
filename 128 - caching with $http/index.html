@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Egghead.io</title>
+    <link rel="stylesheet" href="bower_components/pure/pure.css"/>
+
+    <script src="bower_components/lodash/dist/lodash.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+
+    <style>body{padding: 10px}</style>
+
+</head>
+<body ng-app="egghead" ng-controller="AppCtrl as app">
+
+<button class="pure-button" ng-click="app.loadPeople()">Load People</button>
+<button class="pure-button" ng-click="app.clearCache()">Clear Cache</button>
+
+<ul>
+    <li ng-repeat="person in app.people">{{ person.name }}</li>
+</ul>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "ui-router-named-views",
+  "version": "0.0.1",
+  "authors": [
+    "Joel Hooks <joelhooks@gmail.com>"
+  ],
+  "description": "Demonstration of named views using the ui-router library for AngularJS",
+  "keywords": [
+    "ui-router",
+    "angularjs",
+    "tutorial"
+  ],
+  "license": "MIT",
+  "homepage": "https://egghead.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-mocks": "~1.2.*",
+    "jasmine-jquery": "~1.5.2"
+  },
+  "dependencies": {
+    "angular": "~1.2.*",
+    "angular-ui-router": "~0.2.*",
+    "jquery": "~1.10.2",
+    "lodash": "~2.4.1",
+    "bootstrap": "~3.0.3"
+  }
+}

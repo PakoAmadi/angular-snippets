@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- Each of these scripts are the latest version of the library at the time this jsbin was created -->
+    
+    <!-- Twitter bootstrap -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- api-check is a dependency of angular-formly -->
+    <script src="//rawgit.com/kentcdodds/apiCheck.js/master/dist/apiCheck.min.js"></script>
+    
+    <!-- angular.js is a dependency of angular-formly (obviously) -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+    <!-- This is angular-formly -->
+    <script src="//rawgit.com/formly-js/angular-formly/4.0.8/dist/formly.js"></script>
+    
+    <!-- This is a bootstrap template libraray giving us some pre-defined types for bootstrap -->
+    <script src="//rawgit.com/formly-js/angular-formly-templates-bootstrap/4.0.3/dist/angular-formly-templates-bootstrap.js"></script>
+
+    <title>Angular Formly Lesson</title>
+  </head>
+
+  <body ng-app="formlyExample" ng-controller="MainCtrl as vm">
+    <div>
+      <h1>
+        angular-formly: Introduction<br />
+        <small>Egghead.io lesson by @kentcdodds</small>
+      </h1>
+      <form name="vm.form" ng-submit="vm.onSubmit()" novalidate>
+        <formly-form model="vm.model" fields="vm.fields"></formly-form>
+        <button type="submit" class="btn btn-primary submit-button">Submit</button>
+      </form>
+      
+      <form name="vm.form" ng-submit="vm.onSubmit()" novalidate>
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input ng-model="vm.model.firstName" id="firstName" name="firstName" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary submit-button">Submit</button>
+      </form>
+      <h2>Model</h2>
+      <pre>{{vm.model | json}}</pre>
+      <h2>Fields <small>(note, functions are not shown)</small></h2>
+      <pre>{{vm.originalFields | json}}</pre>
+      <h2>Form</h2>
+      <pre>{{vm.form | json}}</pre>
+    </div>
+    
+  </body>
+
+</html>

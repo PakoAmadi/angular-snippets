@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Egghead.io</title>
+    <link rel="stylesheet" href="bower_components/bootstrap.css/css/bootstrap.css"/>
+</head>
+<body ng-app="app" ng-controller="TodoCtrl as todoCtrl">
+
+<div ng-repeat="todo in todoCtrl.todos">
+    {{todo.item}}
+</div>
+<form>
+    <input type="text" ng-model="newTodo"/>
+    <input type="submit" ng-click="todoCtrl.addTodo(newTodo)"/>
+</form>
+<script src="bower_components/angular/angular.js"></script>
+<script src="app-promises.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "AnimationTutorials",
+  "version": "0.0.0",
+  "authors": [
+    "johnlindquist"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "~1.2.12",
+    "angular": "~1.2.12",
+    "greensock": "~1.11.4",
+    "topcoat": "~0.8.0"
+  }
+}

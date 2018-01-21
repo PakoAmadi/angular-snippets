@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+
+<button id="jquery-button">JQuery click</button>
+<div id="jquery-content">I'm jquery content</div>
+
+<hr/>
+
+<div ng-app="compare" ng-controller="AppCtrl as app">
+    <button ng-click="app.toggle()">Angular click</button>
+    <div ng-hide="app.isHidden">Angular content</div>
+    <div ng-hide="app.isHidden">Angular content</div>
+    <div ng-hide="app.isHidden">Angular content</div>
+    <div ng-hide="app.isHidden">Angular content</div>
+
+    <div ng-show="app.isHidden">Inverse</div>
+</div>
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.9/angular.min.js"></script>
+
+<script src="app.js"></script>
+</body>
+</html>

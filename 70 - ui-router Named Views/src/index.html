@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+  <link rel="stylesheet" type="text/css" href="<%= file %>"/>
+  <% }); %>
+</head>
+<body ng-app="ui-router-named-views">
+
+<egghead-banner title="egghead.io presents: ui-router named views"></egghead-banner>
+
+<div class="container">
+
+  <!-- Header -->
+  <div ui-view="header" class="row"></div>
+
+  <div class="row">
+    <!-- Sidebar/Nav -->
+    <div ui-view="sidebar" class="col-xs-3"></div>
+    <!-- Content -->
+    <div ui-view="content" class="col-xs-9"></div>
+  </div>
+
+  <!-- Footer -->
+  <div ui-view="footer" class="row"></div>
+</div>
+
+<!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+<script type="text/javascript" src="<%= file %>"></script>
+<% }); %>
+</body>
+</html>

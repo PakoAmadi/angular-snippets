@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="compilation">
+<head>
+    <meta charset="utf-8">
+    <title>Compilation Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div log-compile="parent">
+    <div log-compile="..child 1">
+        <div log-compile="....child 1 a"></div>
+        <div log-compile="....child 1 b"></div>
+    </div>
+    <div log-compile="..child 2">
+        <div log-compile="....child 2 a"></div>
+        <div log-compile="....child 2 b"></div>
+    </div>
+</div>
+
+<!-- LOG -->
+<pre>{{log}}</pre>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+<script src="egghead.js"></script>
+</body>
+</html>

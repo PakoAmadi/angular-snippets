@@ -1,0 +1,19 @@
+{
+  "name": "AngularJSTutorials",
+  "version": "0.0.0",
+  "authors": [
+    "johnlindquist <johnlindquist@jetbrains.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-sanitize": "~1.2.10",
+    "bootstrap.css": "~2.3.2"
+  }
+}

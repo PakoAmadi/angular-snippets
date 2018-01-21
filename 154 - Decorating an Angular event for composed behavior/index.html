@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>AOP Pattern Example, Mixpanel</title>
+
+    <link rel="stylesheet"
+          href="assets/style/style.css"/>
+</head>
+<body>
+
+<div ng-controller="FiringCtrl">
+    <h4>Firing</h4>
+    <select ng-options="e for e in myEvents"
+            ng-model="myEvent"></select>
+    <button ng-click="fireEvent(myEvent)">Fire Off Event</button>
+</div>
+
+<div ng-controller="CatchingCtrl">
+    <h4>Catching</h4>
+
+    <p ng-bind="message"></p>
+</div>
+
+<!-- Scripts -->
+<script src="bower_components/lodash/dist/lodash.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="app/app.js"></script>
+<script src="app/controllers/firing.js"></script>
+<script src="app/controllers/catching.js"></script>
+<script src="app/decorators/event.js"></script>
+
+<script src="app/api/mixpanel.min.js"></script>
+<script src="app/api/mixpanel-tracker.js"></script>
+
+</body>
+</html>

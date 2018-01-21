@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/localforage/0.9.1/localforage.min.js"></script>
+  <script src="https://rawgit.com/ocombe/angular-localForage/master/dist/angular-localForage.min.js"></script>
+
+  <script src="app.js"></script>
+</head>
+<body class="container" ng-app="forageDemo">
+
+
+<div local-forage="user"></div>
+
+First Name:
+<input class="form-control" ng-model="user.firstName">
+Last Name:
+<input class="form-control" ng-model="user.lastName">
+
+
+
+
+
+</body>
+</html>

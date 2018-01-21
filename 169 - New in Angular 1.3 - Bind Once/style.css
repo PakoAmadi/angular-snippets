@@ -1,0 +1,38 @@
+.person-card {
+  display: block;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  padding: 10px 10px 30px 10px;
+  margin: 18px;
+  border-radius: 2px;
+  background-color: #FFF;
+}
+.person-card .person-avatar-container {
+  text-align: center;
+}
+.person-card .person-avatar-container img {
+  height: 128px;
+  width: 128px;
+  cursor: pointer;
+}
+.controls {
+  margin-top: 14px;
+}
+.margin-vertical-small {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.margin-vertical-large {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#totalPeople {
+  width: 120px;
+}
+.hover-items .item {
+  display: inline-block;
+  padding: 20px;
+}
+.hover-items .item.hovering {
+  background-color: #DDD;
+}

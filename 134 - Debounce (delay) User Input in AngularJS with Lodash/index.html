@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Egghead.io</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css"/>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular.js"></script>
+    <script src="app.js"></script>
+
+
+</head>
+<body ng-app="egghead" ng-controller="AppCtrl as app" class="container">
+
+<input type="text" ng-model="app.searchTerm"/>
+<span>{{ app.infoMessage }}</span>
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="person in app.people | filter: app.debounceTerm track by person.id ">
+        <td>{{ $index + 1 }}</td>
+        <td>{{ person.firstName }}</td>
+        <td>{{ person.lastName }}</td>
+        <td>{{ person.email }}</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

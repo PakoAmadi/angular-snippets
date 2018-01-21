@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="website">
+    <head>
+        <meta charset="utf-8">
+        <title>Egghead.io - Greensock TimelineLite</title>
+
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/timeline.greensock.css">
+    </head>
+
+    <body ng-controller="MainCtrl">
+
+        <div class="slider">
+            <div ng-repeat="slide in slides"
+                 ng-hide="!isCurrentSlideIndex($index)"
+                 class="slide slide-animation">
+                <img class="nonDraggableImage" ng-src="{{slide.bg}}">
+                <img class="nonDraggableImage avatar" ng-src="{{slide.avatar}}">
+                <h1 class="title"><span>{{slide.title}}</span></h1>
+                <h3 class="subtitle"><span>{{slide.subtitle}}</span></h3>
+            </div>
+        </div>
+
+        <div class="nav">
+            <div ng-repeat="slide in slides"
+                 ng-class="{'active':isCurrentSlideIndex($index)}"
+                 ng-click="setCurrentSlideIndex($index)">
+                <h3>{{slide.title}}</h3>
+            </div>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
+
+        <script src="js/timeline.greensock.js"></script>
+
+    </body>
+</html>
